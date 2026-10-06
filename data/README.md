@@ -39,7 +39,7 @@ The file can be regenerated from the original UCI archive with [`prepare_german_
 
 | | |
 |---|---|
-| **Used in** | Homework assignments of `eda_and_econometric_models.ipynb` and `decision_trees_and_random_forest.ipynb` |
+| **Used in** | Homework assignments of `eda_and_econometric_models.ipynb` and `decision_trees_and_random_forest.ipynb`; `ml1_recap_for_ml2.ipynb` (Sections 2–6) |
 | **Content** | 30,000 credit card clients of a Taiwanese bank (April–September 2005), 23 features (credit limit, sex, education, marital status, age, six months of repayment status `PAY_0`–`PAY_6`, bill amounts `BILL_AMT1`–`6`, payment amounts `PAY_AMT1`–`6`) and the target `default_next_month` (1 = default: 22.1%) |
 | **Source** | Yeh, I-C. (2016). *Default of Credit Card Clients*. UCI Machine Learning Repository. <https://doi.org/10.24432/C55S3H> |
 | **Licence** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |

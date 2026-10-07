@@ -9,6 +9,29 @@ Lecturer: dr Michał Woźniak
 Slides are available here:
 [Lecture Materials (Google Slides)](https://docs.google.com/presentation/d/1G5hvY6wKj9ig5f0dToDHKsznlwjw3UBT6wUsPASYiHQ/edit?usp=sharing)
 
+## Course Schedule (Winter Semester 2026/27)
+
+- **Lectures** (common for all groups): Tuesday 16:45–18:15, room A203 (Building A).
+- **Labs**: all lab groups cover the same content. In the *Date* column, the first date is for the groups starting on 8 October (Thursday 13:15–14:45, Aula I, Building C; Thursday 15:00–16:30, room A102, Building A), the second date for the group starting on 15 October (Thursday 15:00–16:30, room A102, Building A).
+
+| Class | Date | Topic | Materials |
+|---|---|---|---|
+| Lab 1 | 08.10 / 15.10 | Introduction to the course, what is machine learning, the course repository, Python refresher | this README, [SETUP.md](SETUP.md), `python_course.ipynb` |
+| Lecture 1 | 13.10 | Introduction to Machine Learning: loss functions, gradient descent, linear and logistic regression | slides, Chapter 1 |
+| Lab 2 | 22.10 / 29.10 | Opening mini-lecture (~20 min): ML project workflow, data preparation, EDA, imputation and feature engineering (slides, Chapter 4); then the lab: exploratory data analysis, data wrangling, data engineering | slides, Chapter 4 (first part); `eda_and_data_wrangling.ipynb` |
+| Lecture 2 | 27.10 | Assessing model accuracy, machine learning diagnostics, cross-validation; regularization, hyperparameter tuning, feature selection | slides, Chapter 2 and Chapter 4 (second part) |
+| Lab 3 | 05.11 / 12.11 | Linear and logistic regression in practice, the Kaggle League starter | `linear_and_logistic_regression.ipynb`, `kaggle_league_starter.ipynb` |
+| Lecture 3 | 10.11 | K-nearest neighbours; class rebalancing, probability calibration, model drift | slides, Chapters 3 and 4 |
+| Lab 4 | 19.11 / 26.11 | K-nearest neighbours | `knn.ipynb` |
+| Lecture 4 | 24.11 | Support Vector Machines (SVM, SVR) | slides, Chapter 3 |
+| Lab 5 | 03.12 / 10.12 | Support Vector Machines | `svm.ipynb` |
+| Lecture 5 | 08.12 | Decision trees, Random Forest, ensembles | slides, Chapters 3 and 4 |
+| Lab 6 | 17.12 / 07.01 | Decision trees and Random Forest | `decision_trees_and_random_forest.ipynb` |
+| Lab 7 | 14.01 / 21.01 | Core machine learning techniques | `core_ml_techniques.ipynb` |
+| Lecture 6 | 19.01 | Revision lecture, Kaggle League finale | — |
+
+The final theoretical exam takes place in the winter examination session (date in USOS).
+
 ## Quick Start
 
 ```bash
@@ -20,20 +43,20 @@ uv run jupyter lab
 
 **New to `uv`, virtual environments or Git?** Follow the step-by-step guide in **[SETUP.md](SETUP.md)** — it explains what `uv` is, how to install it on Windows / macOS / Linux, how to select the kernel in VS Code, and how to fix the most common problems.
 
-**New to Python, or a bit rusty?** Work through [`notebooks/python_course.ipynb`](notebooks/python_course.ipynb) before the first lab.
+**New to Python, or a bit rusty?** Work through [`notebooks/python_course.ipynb`](notebooks/python_course.ipynb) — it is introduced in Lab 1 and should be completed during the first weeks of the semester.
 
 ## Notebooks
 
 | Notebook | Used in | Topics |
 |---|---|---|
-| [`python_course.ipynb`](notebooks/python_course.ipynb) | Self-study (before Lab 1) | A complete Python course for independent work: language basics, collections, control flow, functions, errors, standard library, file I/O, OOP (incl. a scikit-learn-style estimator), generators, NumPy, pandas, matplotlib / seaborn, a first scikit-learn pipeline, code quality. 41 exercises with hidden solutions and a capstone project. |
-| [`eda_and_econometric_models.ipynb`](notebooks/eda_and_econometric_models.ipynb) | Lab 1 | Exploratory data analysis, data wrangling and a first econometric model on a real bank-marketing dataset: ingestion, hidden missing values and sentinels, consistency checks, reconstructing the time dimension, target leakage, out-of-time vs. random splits, univariate / bivariate / multivariate analysis (confidence intervals, Cramér's V, Information Value, VIF, PCA), feature engineering, saving data, linear probability model and logit with odds ratios and marginal effects, multicollinearity in practice, time-aware validation |
-| [`linear_and_logistic_regression.ipynb`](notebooks/linear_and_logistic_regression.ipynb) | Lab 1 | Linear and logistic regression (from scratch, scikit-learn and statsmodels) and their regularized variants (Ridge, Lasso, Elastic Net, L1 / L2 / Elastic Net logistic regression) |
-| [`knn.ipynb`](notebooks/knn.ipynb) | Lab 2 | K-Nearest Neighbors: from-scratch implementation, K-D trees, scikit-learn, cross-validation, hyperparameter tuning |
-| [`svm.ipynb`](notebooks/svm.ipynb) | Lab 3 | Support Vector Machines: primal (sub-gradient) and dual (kernel) from-scratch implementations, SVC / SVR, cross-validation, hyperparameter tuning |
-| [`decision_trees_and_random_forest.ipynb`](notebooks/decision_trees_and_random_forest.ipynb) | Lecture 5 / self-study | CART and Random Forest from scratch; tree inspection, overfitting, cost-complexity pruning, instability, extrapolation; bagging vs. Random Forest vs. Extra Trees, OOB error, MDI vs. permutation importance, predicted probabilities; hyperparameter tuning; a complete credit-scoring pipeline with categorical features, class weights and a cost-based decision threshold |
-| [`kaggle_league_starter.ipynb`](notebooks/kaggle_league_starter.ipynb) | Kaggle League | Submission template that satisfies all formal rules of the League: header cell, raw Kaggle files, preprocessing in a pipeline, model restricted to the edition's family (enforced by an assertion), cross-validated score vs. the naive baseline, fixed seeds, submission file in `sample_submission` format with an MD5 checksum for the reproducibility check. Runs on a synthetic demo dataset until the real competitions open |
-| [`core_ml_techniques.ipynb`](notebooks/core_ml_techniques.ipynb) | Labs 4–5 | Core ML techniques: imputation, feature engineering, regularization, feature selection, class rebalancing, ensembles, calibration, drift, evaluation metrics, CV variants, Bayesian hyperparameter search |
+| [`python_course.ipynb`](notebooks/python_course.ipynb) | Lab 1 + self-study | A complete Python course for independent work — no machine learning, that starts in the labs: language basics, collections, control flow, functions, errors, standard library, file I/O, OOP, generators, NumPy (incl. linear algebra and simulation), pandas, matplotlib / seaborn, code quality and reproducibility. 37 exercises with hidden solutions and a capstone project (multi-asset portfolio analysis). |
+| [`eda_and_data_wrangling.ipynb`](notebooks/eda_and_data_wrangling.ipynb) | Lab 2 | Exploratory data analysis and data wrangling on a real bank-marketing dataset: ingestion, hidden missing values and sentinels, consistency checks, reconstructing the time dimension, target leakage, out-of-time vs. random splits, univariate / bivariate / multivariate analysis (confidence intervals, Cramér's V, Information Value, VIF, PCA), feature stability over time (PSI), stateless feature engineering, saving data, turning EDA findings into modelling decisions |
+| [`linear_and_logistic_regression.ipynb`](notebooks/linear_and_logistic_regression.ipynb) | Lab 3 | Linear and logistic regression (from scratch, scikit-learn and statsmodels) and their regularized variants (Ridge, Lasso, Elastic Net, L1 / L2 / Elastic Net logistic regression) |
+| [`knn.ipynb`](notebooks/knn.ipynb) | Lab 4 | K-Nearest Neighbors: from-scratch implementation, K-D trees, scikit-learn, cross-validation, hyperparameter tuning |
+| [`svm.ipynb`](notebooks/svm.ipynb) | Lab 5 | Support Vector Machines: primal (sub-gradient) and dual (kernel) from-scratch implementations, SVC / SVR, cross-validation, hyperparameter tuning |
+| [`decision_trees_and_random_forest.ipynb`](notebooks/decision_trees_and_random_forest.ipynb) | Lab 6 | CART and Random Forest from scratch; tree inspection, overfitting, cost-complexity pruning, instability, extrapolation; bagging vs. Random Forest vs. Extra Trees, OOB error, MDI vs. permutation importance, predicted probabilities; hyperparameter tuning; a complete credit-scoring pipeline with categorical features, class weights and a cost-based decision threshold |
+| [`kaggle_league_starter.ipynb`](notebooks/kaggle_league_starter.ipynb) | Lab 3, Kaggle League | Submission template that satisfies all formal rules of the League: header cell, raw Kaggle files, preprocessing in a pipeline, model restricted to the edition's family (enforced by an assertion), cross-validated score vs. the naive baseline, fixed seeds, submission file in `sample_submission` format with an MD5 checksum for the reproducibility check. Runs on a synthetic demo dataset until the real competitions open |
+| [`core_ml_techniques.ipynb`](notebooks/core_ml_techniques.ipynb) | Lab 7 (Sections 1–4 also support Lab 3) | Core ML techniques: imputation, feature engineering, regularization, feature selection, class rebalancing, ensembles, calibration, drift, evaluation metrics, CV variants, Bayesian hyperparameter search |
 
 Every model notebook follows the same structure: theory → from-scratch implementation → scikit-learn → cross-validation and hyperparameter tuning → complete pipeline → best practices → homework assignment.
 
@@ -41,14 +64,16 @@ The notebooks are committed **without outputs** — run them yourself (`Run → 
 
 ### Kaggle League
 
-Each edition of the Kaggle League is restricted to one model family, and the corresponding notebook is your starting point:
+Each edition of the Kaggle League is restricted to one model family, and the corresponding notebook is your starting point. Editions open on Monday at 12:00 and close on Sunday at 23:59 (Warsaw time):
 
-| Edition | Model family | Notebook |
-|---|---|---|
-| 1 | Linear & logistic regression | `linear_and_logistic_regression.ipynb` |
-| 2 | K-nearest neighbours | `knn.ipynb` |
-| 3 | Support Vector Machines | `svm.ipynb` |
-| 4 | Decision trees & Random Forest | `decision_trees_and_random_forest.ipynb` |
+| Edition | Model family | Opens | Closes | Notebook |
+|---|---|---|---|---|
+| 1 | Linear & logistic regression | 16.11.2026 | 29.11.2026 | `linear_and_logistic_regression.ipynb` |
+| 2 | K-nearest neighbours | 30.11.2026 | 13.12.2026 | `knn.ipynb` |
+| 3 | Support Vector Machines | 14.12.2026 | 27.12.2026 | `svm.ipynb` |
+| 4 | Decision trees & Random Forest | 28.12.2026 | 10.01.2027 | `decision_trees_and_random_forest.ipynb` |
+
+Register your team by **Sunday 25.10.2026, 23:59**. The finale (final results and presentations of the top-3 teams) takes place at the last lecture on 19.01.2027.
 
 Preprocessing, feature engineering, feature selection, tuning and calibration techniques from `core_ml_techniques.ipynb` are allowed in every edition. Start every submission from [`kaggle_league_starter.ipynb`](notebooks/kaggle_league_starter.ipynb). The full rules are in the lecture slides.
 
@@ -58,7 +83,7 @@ Most notebooks use datasets bundled with scikit-learn or downloaded by it on fir
 
 ## External Tutorial — Kedro
 
-In addition to the notebooks above, the course covers a project-structuring tutorial
+In addition to the notebooks above, we recommend a self-study project-structuring tutorial
 using the [Kedro](https://kedro.org/) framework. It is a
 Python framework for building production-grade, reproducible data science pipelines
 (data catalog, nodes, pipelines, parameters, experiment tracking).

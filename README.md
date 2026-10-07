@@ -103,6 +103,7 @@ declarative pipeline configuration rather than one-off notebook cells.
 ├── data/                    # datasets shipped with the repository + their documentation
 │   └── kaggle_demo/         # synthetic train/test/sample_submission files for the Kaggle League starter
 ├── SETUP.md                 # step-by-step environment setup guide for students
+├── CONTRIBUTING.md          # how to edit and validate the materials (for contributors)
 ├── pyproject.toml           # project dependencies
 ├── uv.lock                  # exact, cross-platform pinned versions of all packages
 ├── .python-version          # Python version used by uv (3.12)
@@ -145,60 +146,6 @@ git pull
 uv sync
 ```
 
-## Contributing / Development
+## Contributing
 
-### Pre-commit hooks
-
-This project uses [pre-commit](https://pre-commit.com/) to enforce code quality on every commit. Install the hooks after syncing dependencies:
-
-```bash
-uv sync --dev
-uv run pre-commit install
-```
-
-The following hooks run automatically on `git commit`:
-
-| Hook | What it does |
-|---|---|
-| `trailing-whitespace` | Strips trailing whitespace from all files |
-| `end-of-file-fixer` | Ensures files end with a single newline |
-| `check-yaml` / `check-toml` | Validates YAML and TOML syntax |
-| `check-merge-conflict` | Catches leftover merge conflict markers |
-| `ruff-check` | Lints and auto-fixes Python files (E, F, W, I rules) |
-| `ruff-format` | Formats Python files (Black-compatible) |
-| `nbqa-ruff` | Runs ruff linting on notebook cells |
-| `nbqa-ruff-format` | Runs ruff formatter on notebook cells |
-| `nbstripout` | Cleans notebook metadata before committing. It is configured with `--keep-output --keep-count`, i.e. it does **not** remove cell outputs — clear them yourself (`Edit → Clear Outputs of All Cells`) before committing a lab notebook |
-
-To run all hooks manually against all files:
-
-```bash
-uv run pre-commit run --all-files
-```
-
-The `ruff` and `nbstripout` hook versions in `.pre-commit-config.yaml` are kept equal to the versions pinned in `uv.lock`, so that `uv run ruff ...` and the hooks always agree.
-
-### Linting rules
-
-Ruff is configured in `pyproject.toml` with:
-- **Line length:** 120 characters
-- **Rules:** `E` (pycodestyle errors), `F` (pyflakes), `W` (pycodestyle warnings), `I` (isort)
-- **Notebook-specific ignores:** `E402` (import-not-at-top, expected in cells), `E501` (line-too-long, alignment-heavy print statements)
-
-## Dependencies
-
-- `numpy`, `pandas` – data manipulation
-- `matplotlib`, `seaborn` – visualization
-- `scikit-learn` – machine learning models and utilities
-- `scipy` – scientific computing
-- `statsmodels` – classical statistical inference (OLS, GLM, p-values, confidence intervals)
-- `scikit-optimize` – Bayesian hyperparameter search (`BayesSearchCV`)
-- `imbalanced-learn` – handling imbalanced datasets
-- `jupyter`, `ipykernel` – notebook environment
-
-### Dev dependencies
-
-- `ruff` – linter and formatter
-- `pre-commit` – git hook manager
-- `nbqa` – run linters on Jupyter notebooks
-- `nbstripout` – clean notebook metadata before committing
+Editing the materials (pre-commit hooks, linting rules, how notebooks are validated, dependencies): see [CONTRIBUTING.md](CONTRIBUTING.md).

@@ -1,0 +1,21 @@
+[project]
+name = "ml1-kaggle-league-e2-knn-claims"
+version = "0.1.0"
+description = "Kaggle League 2026/27 - edition 2 (K-nearest neighbours), Travel Claims (classification)"
+requires-python = ">=3.12"
+dependencies = [
+    "imbalanced-learn==0.14.2",
+    "ipykernel==7.3.0",
+    "jupyter==1.1.1",
+    "matplotlib==3.11.2",
+    "numpy==2.5.3",
+    "pandas==3.0.6",
+    "scikit-learn==1.9.1",
+    "scikit-optimize==0.10.2",
+    "scipy==1.18.1",
+    "seaborn==0.13.2",
+    "statsmodels==0.15.0",
+]
+
+[tool.uv]
+package = false

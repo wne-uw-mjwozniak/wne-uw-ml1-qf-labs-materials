@@ -1,0 +1,10 @@
+# Kaggle League team repository
+# competition data is never committed (download it into each folder's data/)
+*/data/*
+!*/data/.gitkeep
+# virtual environments created by `uv sync` in each folder
+.venv/
+# Jupyter / OS clutter
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store

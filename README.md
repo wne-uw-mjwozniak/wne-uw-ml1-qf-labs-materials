@@ -55,7 +55,7 @@ uv run jupyter lab
 | [`knn.ipynb`](notebooks/knn.ipynb) | Lab 4 | K-Nearest Neighbors: from-scratch implementation, K-D trees, scikit-learn, cross-validation, hyperparameter tuning |
 | [`svm.ipynb`](notebooks/svm.ipynb) | Lab 5 | Support Vector Machines: primal (sub-gradient) and dual (kernel) from-scratch implementations, SVC / SVR, cross-validation, hyperparameter tuning |
 | [`decision_trees_and_random_forest.ipynb`](notebooks/decision_trees_and_random_forest.ipynb) | Lab 6 | CART and Random Forest from scratch; tree inspection, overfitting, cost-complexity pruning, instability, extrapolation; bagging vs. Random Forest vs. Extra Trees, OOB error, MDI vs. permutation importance, predicted probabilities; hyperparameter tuning; a complete credit-scoring pipeline with categorical features, class weights and a cost-based decision threshold |
-| [`kaggle_league_starter.ipynb`](notebooks/kaggle_league_starter.ipynb) | Lab 3, Kaggle League | Submission template that satisfies all formal rules of the League: header cell, raw Kaggle files, preprocessing in a pipeline, model restricted to the edition's family (enforced by an assertion), cross-validated score vs. the naive baseline, fixed seeds, submission file in `sample_submission` format with an MD5 checksum for the reproducibility check. Runs on a synthetic demo dataset until the real competitions open |
+| [`kaggle_league_starter.ipynb`](notebooks/kaggle_league_starter.ipynb) | Lab 3, Kaggle League | Submission template that satisfies all formal rules of the League: header cell, raw Kaggle files, preprocessing in a pipeline (incl. multi-select columns), model restricted to the edition's family (enforced by an assertion), cross-validated score vs. the naive baseline, fixed seeds, `submission.csv` in `sample_submission` format with an MD5 checksum for the reproducibility check. Runs on a synthetic demo dataset here; a pre-configured copy for every competition is in [`kaggle_league_template/`](kaggle_league_template/README.md) |
 | [`core_ml_techniques.ipynb`](notebooks/core_ml_techniques.ipynb) | Lab 7 (Sections 1–4 also support Lab 3) | Core ML techniques: imputation, feature engineering, regularization, feature selection, class rebalancing, ensembles, calibration, drift, evaluation metrics, CV variants, Bayesian hyperparameter search |
 
 Every model notebook follows the same structure: theory → from-scratch implementation → scikit-learn → cross-validation and hyperparameter tuning → complete pipeline → best practices → homework assignment.
@@ -73,9 +73,9 @@ Each edition of the Kaggle League is restricted to one model family, and the cor
 | 3 | Support Vector Machines | 14.12.2026 | 27.12.2026 | `svm.ipynb` |
 | 4 | Decision trees & Random Forest | 28.12.2026 | 10.01.2027 | `decision_trees_and_random_forest.ipynb` |
 
-Register your team by **Sunday 25.10.2026, 23:59**. The finale (final results and presentations of the top-3 teams) takes place at the last lecture on 19.01.2027.
+Register your team by **Sunday 25.10.2026, 23:59**, together with the link to your team's **private repository** created from [`kaggle_league_template/`](kaggle_league_template/README.md) (one folder per competition, each its own uv project; the lecturer re-runs the notebook at the commit named in your Kaggle submission description). The finale (final results and presentations of the top-3 teams) takes place at the last lecture on 19.01.2027.
 
-Preprocessing, feature engineering, feature selection, tuning and calibration techniques from `core_ml_techniques.ipynb` are allowed in every edition. Start every submission from [`kaggle_league_starter.ipynb`](notebooks/kaggle_league_starter.ipynb). The full rules are in the lecture slides.
+Preprocessing, feature engineering, feature selection, tuning and calibration techniques from `core_ml_techniques.ipynb` are allowed in every edition. Start every submission from the notebook in the competition's folder of your team repository (a copy of [`kaggle_league_starter.ipynb`](notebooks/kaggle_league_starter.ipynb)). The lecturer's reference entries (Baseline, Benchmark I, Benchmark II) appear on every leaderboard as unranked benchmark rows; only models of the edition's family may produce the submitted predictions, and no external data (including the public sources the datasets were derived from) may be used. The full rules are in the lecture slides.
 
 ## Data
 
@@ -100,6 +100,7 @@ declarative pipeline configuration rather than one-off notebook cells.
 ```text
 .
 ├── notebooks/               # lab notebooks (see the table above)
+├── kaggle_league_template/  # skeleton of a team's private Kaggle League repository (8 folders, one uv project each)
 ├── data/                    # datasets shipped with the repository + their documentation
 │   └── kaggle_demo/         # synthetic train/test/sample_submission files for the Kaggle League starter
 ├── SETUP.md                 # step-by-step environment setup guide for students

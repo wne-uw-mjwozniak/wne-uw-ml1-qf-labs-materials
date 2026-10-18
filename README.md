@@ -8,6 +8,7 @@ Lecturer: dr Michał Woźniak
 
 Slides are available here:
 [Lecture Materials (Google Slides)](https://docs.google.com/presentation/d/1G5hvY6wKj9ig5f0dToDHKsznlwjw3UBT6wUsPASYiHQ/edit?usp=sharing)
+[Lecture Materials (PDF)](https://drive.google.com/file/d/1HpU0a_ybOzbnaehR-WeQjXZw5LZifxwI/view?usp=sharing)
 
 ## Course Schedule (Winter Semester 2026/27)
 

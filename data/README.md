@@ -33,7 +33,7 @@ The file can be regenerated from the original UCI archive with [`prepare_german_
 | **Licence** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 | **Changes made** | None — the original semicolon-separated file, gzip-compressed. Read it with `pd.read_csv(path, sep=";")`. |
 
-**Known quirks** (all discussed in the notebook): missing values are coded as `"unknown"`; `pdays == 999` means "not previously contacted" (but see the notebook for a subtlety); `duration` is a leaky feature (it is only known after the call); the rows are ordered by date and the year is not given.
+**Known quirks:** missing values are coded as `"unknown"`; `pdays == 999` means "not previously contacted" (but see the notebook, Section 5.3, for a subtlety); `duration` is a leaky feature (it is only known after the call); the rows are ordered by date (the notebook uses this for an out-of-time split), but the year of a contact is not given.
 
 ## `credit_card_default.csv.gz`
 

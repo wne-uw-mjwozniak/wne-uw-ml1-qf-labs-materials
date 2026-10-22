@@ -45,7 +45,7 @@ The file can be regenerated from the original UCI archive with [`prepare_german_
 | **Licence** | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 | **Changes made** | Converted from the original Excel file (`.xls`, second header row) to CSV; the `ID` column was dropped and the target column `default payment next month` was renamed to `default_next_month`. No rows or values were altered. |
 
-**Known quirks:** `EDUCATION` and `MARRIAGE` contain undocumented codes (0, 5, 6); the `PAY_*` columns contain the values −2 and 0, which the documentation does not explain (they are commonly read as "no consumption" and "revolving credit / paid minimum"); note the naming gap (`PAY_0`, then `PAY_2`–`PAY_6`).
+**Known quirks:** `EDUCATION` and `MARRIAGE` contain undocumented codes (0, 5, 6); the `PAY_*` columns contain the values −2 and 0, which the documentation does not explain (they are commonly read as "no consumption" and "revolving credit / paid minimum"); note the naming gap (`PAY_0`, then `PAY_2`–`PAY_6`). The monthly columns run backwards in time: `PAY_0`, `BILL_AMT1` and `PAY_AMT1` are September 2005, `PAY_6`, `BILL_AMT6` and `PAY_AMT6` are April 2005. Bill amounts can be zero or negative (a credit balance).
 
 ## `kaggle_demo/`
 
